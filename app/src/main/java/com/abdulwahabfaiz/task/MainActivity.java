@@ -22,19 +22,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-                arrayList.add(new MyListData("Email", android.R.drawable.ic_dialog_email,"10"));
-                arrayList.add(new MyListData("Email", android.R.drawable.ic_dialog_email,"10"));
-                arrayList.add(new MyListData("Info", android.R.drawable.ic_dialog_info,"10"));
-                arrayList.add(new MyListData("Delete", android.R.drawable.ic_delete,"10"));
-                arrayList.add(new MyListData("Dialer", android.R.drawable.ic_dialog_dialer,"10"));
-                arrayList.add(new MyListData("Alert", android.R.drawable.ic_dialog_alert,"10"));
-                arrayList.add(new MyListData("Map", android.R.drawable.ic_dialog_map,"10"));
-                arrayList.add(new MyListData("Email", android.R.drawable.ic_dialog_email,"10"));
-                arrayList.add(new MyListData("Info", android.R.drawable.ic_dialog_info,"10"));
-                arrayList.add(new MyListData("Delete", android.R.drawable.ic_delete,"10"));
-                arrayList.add(new MyListData("Dialer", android.R.drawable.ic_dialog_dialer,"10"));
-                arrayList.add(new MyListData("Alert", android.R.drawable.ic_dialog_alert,"10"));
-                arrayList.add(new MyListData("Map", android.R.drawable.ic_dialog_map,"10"));
+                arrayList.add(new MyListData("Bid One", android.R.drawable.ic_dialog_email,10000));
+                arrayList.add(new MyListData("Bid Two", android.R.drawable.ic_dialog_email,120000));
+                arrayList.add(new MyListData("Bid Three", android.R.drawable.ic_dialog_info,180000));
+                arrayList.add(new MyListData("Bid Four", android.R.drawable.ic_delete,30000));
+
 
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
