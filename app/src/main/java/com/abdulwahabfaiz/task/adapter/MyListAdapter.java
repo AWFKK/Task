@@ -1,5 +1,7 @@
 package com.abdulwahabfaiz.task.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,16 +13,21 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.abdulwahabfaiz.task.R;
+import com.abdulwahabfaiz.task.Timer;
 import com.abdulwahabfaiz.task.dataclass.MyListData;
 
 import java.util.ArrayList;
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder> {
     private ArrayList<MyListData> listdata;
+    Context mContext;
 
     // RecyclerView recyclerView;
-    public MyListAdapter(ArrayList<MyListData> listdata) {
+
+
+    public MyListAdapter(ArrayList<MyListData> listdata, Context mContext) {
         this.listdata = listdata;
+        this.mContext = mContext;
     }
 
     @Override
@@ -40,6 +47,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "click on item: " + arraylist.getDescription(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(mContext, Timer.class);
+                mContext.startActivity(intent);
             }
         });
     }
